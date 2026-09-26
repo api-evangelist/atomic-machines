@@ -1,23 +1,72 @@
 aid: atomic-machines
+
 name: Atomic Machines
-description: 'Atomic Machines is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Atomic Machines is a manufacturing technology company developing automation systems that enable flexible, precision assembly for small‑batch and custom products. Its platform combines robotics, vision systems, and software to streamline production workflows, improve scalability, and reduce time‑to‑market. Founded in 2019 by Jeff Holden and Prashant Patil, Atomic Machines is headquartered in Berkeley, California, and focuses on industrial robotics and advanced manufacturing solutions.'
+
 url: https://raw.githubusercontent.com/api-evangelist/atomic-machines/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-26 (modular-v1; was harvest)
+
+image: https://images.squarespace-cdn.com/content/v1/5e3eafb762402c0ce35af896/1593725289569-5OTARBMYQVFVNRKI02S3/FFCD_Brass_0012AutoContrast.jpg
+
 specificationVersion: '0.20'
+
 created: '2026-09-26'
+
 modified: '2026-09-26'
+
 tags:
 - Company
-apis: []
+- Manufacturing
+- Robotics
+- Automation
+- Silicon
+- MEMS
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/atomic-machines-hosts.yml
+- type: Vendors
+  url: vendors/atomic-machines-vendors.yml
+- type: GitHubOrganization
+  url: https://github.com/atomicmachines
+- type: DomainSecurity
+  url: security/atomic-machines-domain-security.yml
 - type: Website
-  url: https://forgeglobal.com/atomic-machines_stock/
+  url: https://www.atomicmachines.com/
+
+- type: PrivacyPolicy
+  url: https://www.atomicmachines.com/privacypolicy
+- type: GettingStarted
+  url: https://www.atomicmachines.com/join
+- type: SignUp
+  url: https://www.atomicmachines.com/join
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: js-rendered-docs
+  detail: "The site serves only a JavaScript shell with no machine‑readable API specifications."
+  evidence:
+    - url: https://www.atomicmachines.com/
+      status: 200
+  checked: 2026-09-26
+x-enrichment:
+  date: '2026-09-26'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local

@@ -1,0 +1,63 @@
+generated: '2026-09-26'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 4
+  own: 3
+  other_domain: 0
+  platform: 1
+  roles:
+  - api
+  - other
+  - source
+  - website
+hosts:
+- host: api.atomicmachines.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: atomicmachines.com
+  role: api
+  relation: own
+- host: atomicmachines.com
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: atomicmachines.com
+  role: other
+  relation: own
+- host: github.com
+  found_by:
+  - pointer
+  types:
+  - GitHubOrganization
+  serves: []
+  registrable_domain: github.com
+  role: source
+  relation: platform
+- host: www.atomicmachines.com
+  found_by:
+  - pointer
+  - probed
+  - docs-index
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - Website
+  - PrivacyPolicy
+  - GettingStarted
+  - SignUp
+  serves:
+  - docs
+  - hosting
+  vendor: squarespace
+  registrable_domain: atomicmachines.com
+  role: website
+  relation: own
